@@ -4,9 +4,11 @@ import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 import Register from '../views/Register.vue';
 import Dashboard from '../views/Dashboard.vue';
+import Index from '../views/tasks/index.vue'
 
 Vue.use(VueRouter);
-
+// const userName = 'zaid';
+// const userPath = `/user_${userName}`
 const routes = [{
         path: '/',
         name: 'Home',
@@ -29,6 +31,11 @@ const routes = [{
         name: 'Dashboard',
         component: Dashboard,
         meta: { authOnly: true },
+    },
+    {
+        path: '/task',
+        name: 'Index',
+        component: Index,
     },
 ];
 

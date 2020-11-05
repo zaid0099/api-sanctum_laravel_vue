@@ -22,7 +22,7 @@ export default {
 
   mounted() {
     User.auth().then(res => {
-      // console.log(res);
+      console.log(res);
       this.user = res.data;
     });
   }

@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="container">
       <div class="navbar-header">
-        <router-link class="navbar-brand" to="/">Laravel Sanctum</router-link>
+        <router-link class="navbar-brand" :to="{ name: 'Home' }">Laravel Sanctum</router-link>
       </div>
       <ul class="nav navbar-nav">
         <router-link v-if="!isLoggedIn" class="nav-item nav-link" :to="{ name: 'Login' }">Login</router-link>
@@ -16,6 +16,7 @@
           class="nav-item nav-link"
           :to="{ name: 'Dashboard' }"
         >Dashboard</router-link>
+        <router-link class="nav-item nav-link" :to="{ name: 'Index' }">Index</router-link>
         <a class="nav-item nav-link" v-if="isLoggedIn" @click.prevent="logout" href="#">Logout</a>
       </ul>
     </div>
